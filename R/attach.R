@@ -1,4 +1,5 @@
-core <- c("vispear", "reppear")
+
+core <- c("vispear", "reppear", "skelpear")
 
 core_loaded <- function() {
   search <- paste0("package:", core)
@@ -26,8 +27,7 @@ pearsonverse_attach <- function() {
     crayon::green(cli::symbol$tick), " ", crayon::blue(format(to_load)), " ",
     crayon::col_align(versions, max(crayon::col_nchar(versions)))
   )
-  col1 <- 1:floor(length(packages)/2)
-  info <- paste0(packages[col1], "     ", packages[-col1])
+  info <- paste0(packages)
   msg(paste(info, collapse = "\n"), startup = TRUE)
   suppressPackageStartupMessages(
     lapply(to_load, library, character.only = TRUE, warn.conflicts = FALSE)

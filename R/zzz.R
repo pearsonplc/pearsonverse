@@ -7,10 +7,6 @@
   if (length(att_needed) == 0)
     return()
 
-  cli::cat_line("")
-
-  Sys.sleep(2)
-
   crayon::num_colors(TRUE)
   pearsonverse_attach()
 

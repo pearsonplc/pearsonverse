@@ -1,5 +1,5 @@
 
-core <- c("vispear", "reppear")
+core <- c("vispear", "reppear", "skelpear")
 
 core_not_installed <- function() {
 
@@ -40,6 +40,10 @@ pearsonverse_install <- function() {
   })
 
   invisible()
+
+  cli::cat_line("")
+
+  Sys.sleep(2)
 }
 
 #'
