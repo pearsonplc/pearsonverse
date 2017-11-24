@@ -42,6 +42,25 @@ pearsonverse_install <- function() {
   invisible()
 }
 
+#'
+#' Install \emph{*pear} package
+#'
+#' Function which allows you to install \emph{*pear} package.
+#'
+#' Regarding \emph{pass} argument, ideally, use default value: \emph{pass = NULL}. After that,
+#' the popup window shows up which ask you for your bitbucket password. In that case, your password
+#' will not be stored in memory. Alternatively, you can use your local .Renviron file.
+#'
+#' @export
+#' @param pkg package name
+#' @param login bitbucket login.
+#' @param pass bitbucket password. You should not put your password directly. Read details.
+#' @param quiet if TRUE suppresses output from this function.
+#' @example
+#' \dontrun{
+#' install_pkgpear("vispear", login = "mikobogu")
+#' }
+
 install_pkgpear <- function(pkg, login, pass = NULL, quiet = FALSE) {
 
   if (is.null(pass)) {
