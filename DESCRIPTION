@@ -1,0 +1,20 @@
+Package: pearsonverse
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 1.0.0
+Author: Mikolaj Bogucki
+Maintainer: Mikołaj Bogucki <mikolaj.bogucki@pearson.com>
+Description: More about what it does (maybe more than one line)
+License: GPL-2
+Imports:
+  cli,
+  crayon,
+  devtools,
+  dplyr,
+  git2r,
+  magrittr,
+  rstudioapi
+URL: 
+Encoding: UTF-8
+RoxygenNote: 6.0.1
+
