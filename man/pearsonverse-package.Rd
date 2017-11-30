@@ -4,7 +4,7 @@
 \name{pearsonverse-package}
 \alias{pearsonverse}
 \alias{pearsonverse-package}
-\title{pearsonverse: What the Package Does (Title Case)}
+\title{pearsonverse: A package which stores all pearson-related packages}
 \description{
 More about what it does (maybe more than one line)
 }

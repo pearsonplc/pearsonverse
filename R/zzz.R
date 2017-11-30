@@ -1,7 +1,7 @@
 .onAttach <- function(...) {
-  inst_needed <- core[!is_installed(core)]
+  # inst_needed <- core[!is_installed(core)]
 
-  pearsonverse_install()
+  # pearsonverse_install()
 
   att_needed <- core[!is_attached(core)]
   if (length(att_needed) == 0)
@@ -12,15 +12,15 @@
 
 }
 
-is_installed <- function(x) {
-  pkg_installed <- utils::installed.packages() %>%
-    as.data.frame() %>%
-    dplyr::filter(Package %in% core) %>%
-    dplyr::pull(Package) %>%
-    as.character()
-
-  x %in% pkg_installed
-}
+# is_installed <- function(x) {
+#   pkg_installed <- utils::installed.packages() %>%
+#     as.data.frame() %>%
+#     dplyr::filter(Package %in% core) %>%
+#     dplyr::pull(Package) %>%
+#     as.character()
+#
+#   x %in% pkg_installed
+# }
 
 is_attached <- function(x) {
   paste0("package:", x) %in% search()
