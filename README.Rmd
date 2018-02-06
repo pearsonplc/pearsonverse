@@ -4,22 +4,97 @@ output:
     variant: markdown_github
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
+```{r, setup, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
   comment = "#>",
-  fig.path = "README-"
+  fig.path = "man/figures/"
 )
 ```
 
-## Overview
+Overview
+------------
 
-Desrciption of `pearsonverse` package.
+Pearsonverse is a collection of packages that make it easier to conduct an exploratory data science project in R from start to end. It is designed to make it easy to install and load core packages from the pearsonverse in a single command.
 
-## Installation
+
+Installation
+------------
 
 ```{r, warning = F, eval = F}
 devtools::install_github("pearsonplc/pearsonverse")
+```
+
+Usage
+------------
+
+`library(pearsonverse)` will load the core `pearsonverse` packages:
+
+-  <a href = "https://github.com/pearsonplc/skelpear" target = "_blank">skelpear</a>, for building a project environment and maintaining a reproducibility.
+-  <a href = "https://github.com/pearsonplc/reppear" target = "_blank">reppear</a>, for building a reproducible report with standardised layout.
+-  <a href = "https://github.com/pearsonplc/vispear" target = "_blank">vispear</a>, for creating visualisation with coherent layout.
+
+You also get a condensed summary when you have loaded:
+
+```{r}
+library(pearsonverse)
+```
+
+Data Science Workflow
+------------
+
+1.&nbsp;Attach all pearson packages.
+
+```{r,eval=F}
+library(pearsonverse)
+```
+
+2.&nbsp;Create a new project. It will open a new session.
+
+```{r,eval=F}
+skelpear::project_create(project_name = "example_project")
+```
+
+3.&nbsp;In the console, the warning shows up:
+
+```{r,eval=F}
+"Warning: There is no `packages.dcf` file in your project. 
+Please use `snapshot_pkg` function to save your package environment."
+```
+
+The `packages.dcf` file lists all attached packages used during the project. It is especially useful when there are more people involved in a code development and when identical package environment is critical.
+
+4.&nbsp;Save your package environment.
+
+```{r,eval=F}
+skelpear::snapshot_pkg()
+```
+
+The function will save your package environment in `config/packages.dcf` file. Once you push it to the bitbucket repository, anybody can pull it and compare to the local package envrionment via `compare_snapshot` function. You can find more info about these functions in  <a href = "https://github.com/pearsonplc/skelpear" target = "_blank">skelpear</a> package introduction.
+
+5.&nbsp;Create a repository on bitbucket and link it to the local project.
+
+6.&nbsp;Then you can start producing code. 
+
+7.&nbsp;Once you're ready to prepare a report with your analysis, use `report_create` function.
+
+8.&nbsp;Initialize report environment.
+```{r,eval=F}
+reppear::report_create(file = "01_report")
+```
+
+By default, the report environment will be stored in `reports` directory. More info about the structure of report directory  <a href = "https://github.com/pearsonplc/reppear" target = "_blank">here</a>.
+
+9.&nbsp;Once you finalised your report, prepare `index.Rmd` file which acts as home page for your report/s.
+
+10.&nbsp;Render all files in `report` directory.
+
+```{r,eval=F}
+reppear::render_all()
+```
+
+11.&nbsp;Then you're ready to publish the whole `reports` directory on your server.
+
+```{r,eval=F}
+reppear::publish()
 ```
