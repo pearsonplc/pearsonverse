@@ -16,6 +16,7 @@ Usage
 `library(pearsonverse)` will load the core `pearsonverse` packages:
 
 -   <a href = "https://github.com/pearsonplc/skelpear" target = "_blank">skelpear</a>, for building a project environment and maintaining a reproducibility.
+
 -   <a href = "https://github.com/pearsonplc/reppear" target = "_blank">reppear</a>, for building reproducible reports with a standardised layout.
 -   <a href = "https://github.com/pearsonplc/vispear" target = "_blank">vispear</a>, for creating visualisations with a coherent layout.
 
@@ -60,6 +61,7 @@ The `packages.dcf` file lists all attached packages used during the project. It 
 ``` r
 skelpear::snapshot_pkg()
 ```
+
 
 The function will save your package environment in `config/packages.dcf` file. Once you push it to a bitbucket repository, anybody can pull it and compare it with the local package envrionment via the `compare_snapshot` function. You can find more info about these functions in <a href = "https://github.com/pearsonplc/skelpear" target = "_blank">skelpear</a> package introduction.
 

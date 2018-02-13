@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Science Project in R</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Exploratory Data Science   Advanced Computing &amp; Data Science Lab, Global Product" />
+    <link rel="stylesheet" href="css/intro_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Data Science Project in R
+## Pearsonverse
+### Exploratory Data Science <br> Advanced Computing &amp; Data Science Lab, Global Product
+
+---
+
+
+
+
+
+## Agenda
+
+--
+
+- What is Pearsonverse?
+
+--
+
+- World before Pearsonverse
+
+--
+
+- Project phases using Pearsonverse
+
+--
+
+- Useful functions in Pearsonverse
+
+--
+
+- Final thoughts
+
+---
+class: center, middle
+
+# What is Pearsonverse?
+
+---
+class: center, middle
+
+### _Pearsonverse is a collection of packages that make it easier to conduct an exploratory data science project in R from start to end._
+
+---
+class: center, middle
+
+# World before Pearsonverse
+
+---
+## World before Pearsonverse
+
+--
+
+Everybody in our team ...
+
+--
+
+- creates plots in different layout.
+
+--
+
+- uses different colour palettes.
+
+--
+
+- creates different project structures.
+
+--
+
+- uses different report templates.
+
+---
+class: center, middle
+
+# Pearsonverse solves all those problems!
+
+---
+## Pearsonverse
+
+--
+
+Collection of packages: 
+
+--
+
+1. &lt;a href = "https://github.com/pearsonplc/skelpear" target = "_blank"&gt;_skelpear_&lt;/a&gt; for building a project environment and maintaining a reproducibility.
+
+--
+
+2. &lt;a href = "https://github.com/pearsonplc/reppear" target = "_blank"&gt;_reppear_&lt;/a&gt; for building a reproducible report with standardised layout.
+
+--
+
+3. &lt;a href = "https://github.com/pearsonplc/vispear" target = "_blank"&gt;_vispear_&lt;/a&gt; for creating visualisation with coherent layout.
+
+.bottom-text[
+_You can find a documentation for pearsonverse  &lt;a href = "https://github.com/pearsonplc/pearsonverse" target = "_blank"&gt;here&lt;/a&gt;._
+]
+
+---
+## Pearsonverse
+
+All you have to do:
+
+
+```r
+# Install package
+devtools::install_github("pearsonplc/pearsonverse")
+
+# Attach package
+library(pearsonverse)
+```
+
+&lt;img src='intro_img/pearsonverse_att.png' height='150'/&gt;
+
+---
+class: center middle no-page-number
+background-image: url('img/divider_blue.jpg')
+background-size: 100%
+
+# Project Phases
+
+---
+## Project phases
+
+
+1. Building a project environment (_skelpear_)
+
+--
+
+2. Conduct analysis (_vispear_)
+
+--
+
+3. Produce a report (_reppear_, _vispear_)
+
+--
+
+4. Publish (_reppear_)
+
+--
+
+Throughout the whole project: Maintain reproducibility (_skelpear_)
+
+---
+class: center middle no-page-number
+background-image: url('img/divider_blue.jpg')
+background-size: 100%
+
+# Building project &lt;br&gt;environment
+
+---
+## Project environment
+
+.small-code[
+
+```r
+skelpear::project_create(name = "project", path = ".")
+```
+]
+
+--
+
+_Two arguments_
+
+--
+
+`name` - Project name. Must be a valid directory name for your file system.     
+
+--
+
+`path` - Path where you want to store your new project.
+
+---
+## Project environment
+
+.small-code[
+
+```r
+skelpear::project_create(name = "project", path = ".")
+```
+]
+
+1. After executing `project_create()`, the new RStudio session will open automatically.
+
+--
+
+2. The function initialises `git` environment.
+
+---
+## Project environment
+
+.small-code[
+
+```r
+skelpear::project_create(name = "project", path = ".")
+```
+]
+
+--
+
+&lt;center&gt;&lt;img src='intro_img/project_enviro.png' height='300'/&gt;&lt;/center&gt;
+--
+
+.bottom-text[
+More info about each directory in  &lt;a href = "https://github.com/pearsonplc/skelpear" target = "_blank"&gt;documentation&lt;/a&gt;.
+]
+
+---
+class: middle, center
+
+# Showtime
+
+---
+## Project environment + git
+
+To push your project into __bitbucket__, two things have to be done:
+
+--
+
+1. Create a repository on bitbucket.    
+
+--
+2. On terminal, use `git remote add origin &lt;remote_URL&gt;` to link your local project with bitbucket repository.
+
+--
+
+After that, you're ready to push your commit/s.
+
+---
+class: center middle no-page-number
+background-image: url('img/divider_blue.jpg')
+background-size: 100%
+
+# Conduct analysis
+
+---
+## Conduct analysis
+
+_Basic layout_
+.pull-three[
+.small-code[
+&lt;pre&gt;
+&lt;code class='r hljs'&gt;
+ggplot(mtcars, 
+       aes(x = qsec, 
+           y = mpg, 
+           color = factor(cyl)
+           )
+       ) + 
+  geom_point(size = 5)
+&lt;/code&gt;
+&lt;/pre&gt;
+]]
+
+.pull-seven[
+&lt;img src="intro_files/figure-html/unnamed-chunk-5-1.png" width="119%" /&gt;
+]
+---
+## Conduct analysis
+
+_theme_enr layout_
+.pull-three[
+.small-code[
+&lt;pre&gt;
+&lt;code class='r hljs'&gt;
+ggplot(mtcars, 
+       aes(x = qsec, 
+           y = mpg, 
+           color = factor(cyl)
+           )
+       ) + 
+  geom_point(size = 5) +
+  &lt;b&gt;theme_enr(color = p_colors)&lt;/b&gt;
+&lt;/code&gt;
+&lt;/pre&gt;
+]]
+
+.pull-seven[
+&lt;img src="intro_files/figure-html/unnamed-chunk-6-1.png" width="119%" /&gt;
+]
+---
+## Conduct analysis
+
+_Save plot_ 
+
+There are two functions:
+
+- `save_plot()` - by default, it creates `.png` file,
+- `save_plot2()` - by default, it creates two files at once, in `png` and `pdf` format.
+
+
+--
+
+.small-code[
+
+```r
+plot &lt;- ggplot(mtcars, aes(qsec, mpg, color = factor(cyl))) + 
+  geom_point(size = 5) +
+  theme_enr(color = p_colors)
+
+# .png and .pdf files are created
+save_plot2(name = plot, 
+           file = "graphs/01_mtcars") 
+```
+]
+
+.bottom-text[
+Both functions are compatible with `theme_enr` layout. 
+]
+
+---
+class: middle, center
+
+# Showtime
+
+---
+## Conduct analysis
+
+_Show palettes_
+
+`show_enr_palettes()` funtion enables to list all available palettes defined in `vispear` package.
+
+--
+
+.small-code[
+
+```r
+vispear::show_enr_palettes()
+```
+
+
+```
+#&gt;          name                     description
+#&gt; 1    p_colors      4-coloured Pearson palette
+#&gt; 2   p_colors2      8-coloured Pearson palette
+#&gt; 3  cat_colors 20-coloured categorical palette
+#&gt; 4  div_colors   11-coloured diverging palette
+#&gt; 5  seq_colors   9-coloured sequential palette
+#&gt; 6 pair_colors      '6-pair of colors' palette
+#&gt; 7 trio_colors     '6-trios of colors' palette
+#&gt; 8 quar_colors  '6-quartets of colors` palette
+```
+]
+
+---
+## Conduct analysis
+
+.small-code[
+
+```r
+datatable_enr(mtcars, tooltip = "This is the description of table.")
+```
+]
+
+&lt;center&gt;&lt;img src='intro_img/datatable_enr.png' height='350'/&gt;&lt;/center&gt;
+
+.bottom-text[
+_More info about the function in  &lt;a href = "http://ea.ioki.pl/~mbogucki/datatable_enr.html" target = "_blank"&gt;documentation&lt;/a&gt; (VPN required)_.
+]
+---
+class: center middle no-page-number
+background-image: url('img/divider_blue.jpg')
+background-size: 100%
+
+# Produce a report
+
+---
+## Produce a report
+
+
+```r
+reppear::report_create(file = "01_report", subdir = "reports")
+```
+
+--
+
+- The function creates a report template.
+
+
+---
+## Produce a report
+
+
+```r
+reppear::report_create(file = "01_report", subdir = "reports")
+```
+
+--
+
+_Two arguments_
+
+--
+
+`file` - Report name. Must be a valid directory name for your file system.     
+
+--
+
+`subdir` - Subdirectory where you want to store your new report.
+
+---
+## Produce a report
+
+
+```r
+reppear::report_create(file = "01_report", subdir = "reports")
+```
+
+&lt;center&gt;&lt;img src='intro_img/report_envir.png' height='150'/&gt;&lt;/center&gt;
+
+--
+
+- `01_report` -  a directory which stores a report and all its dependendies. The report itself has a consistent layout.
+
+--
+- `index.Rmd` - a file which acts as a _home page_ for all reports within the project*. 
+
+.bottom-text[
+_*More info about the file in  &lt;a href = "https://github.com/pearsonplc/reppear" target = "_blank"&gt;documentation&lt;/a&gt;._
+]
+
+---
+## Produce a report
+
+To render _index.Rmd_, 
+
+
+```r
+reppear::render_index()
+```
+
+--
+
+It re/builds _index.html_, _tooltip_content.html_ and _header.html_ files.
+
+---
+class: middle, center
+
+# Showtime
+
+---
+class: center middle no-page-number
+background-image: url('img/divider_blue.jpg')
+background-size: 100%
+
+# Publish
+
+---
+## Publish 
+
+
+```r
+reppear::publish(file = "reports/")
+```
+
+.bottom-text[
+_For now only kvm1-e01.ioki.pl server is defined._
+]
+---
+class: center middle no-page-number
+background-image: url('img/divider_blue.jpg')
+background-size: 100%
+
+# Maintain &lt;br&gt;reproducibility
+
+---
+## Maintain reproducibility
+
+--
+
+
+```r
+# Save your package environment
+snapshot_pkg()
+
+# Compare package environment
+compare_snapshot()
+```
+--
+
+A pair of functions which allows to __save__ and __compare__ set of packages used during the project. It's especially useful when more team members are involved in code development*.
+
+.bottom-text[
+_*More info about how the functions work in  &lt;a href = "https://github.com/pearsonplc/skelpear" target = "_blank"&gt;documentation&lt;/a&gt;._
+]
+---
+class: center, middle
+
+# Final thoughts
+
+---
+## Individual goals
+
+--
+
+- present Pearsonverse to the broader audience
+
+--
+
+- propose one __github repository__ for storing useful R code produced by Lab teams
+
+---
+## Temporary contraint
+
+--
+
+- Pearsonverse was only tested on __macOS__. However, we plan to test it on Linux and Windows.
+
+---
+class: middle, center
+
+# Ideas, bugs?
+
+--
+
+## Please write an issue on https://github.com/pearsonplc/pearsonverse/issues
+
+---
+class: middle, center
+
+# Questions?
+
+---
+class: no-page-number
+background-image: url('img/final.jpg')
+background-size: 100%
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

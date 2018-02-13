@@ -14,8 +14,8 @@ knitr::opts_chunk$set(
 
 Overview
 ------------
-`pearsonverse` is a collection of packages that make it easier to conduct an exploratory data science project in R from start to end. The __pearsonverse__ package itself allows you to easily install and load the core `pearsonverse` packages in a single command.
 
+`pearsonverse` is a collection of packages that make it easier to conduct an exploratory data science project in R from start to end. The __pearsonverse__ package itself allows you to easily install and load the core `pearsonverse` packages in a single command.
 
 Installation
 ------------
@@ -83,6 +83,7 @@ reppear::report_create(file = "01_report")
 ```
 
 By default, the report environment will be stored in `reports` directory. More info about the structure of report directory  <a href = "https://github.com/pearsonplc/reppear" target = "_blank">here</a>.
+
 
 9.&nbsp;Once you've finalised your report, prepare `index.Rmd` file which acts as home page for your report/s.
 
