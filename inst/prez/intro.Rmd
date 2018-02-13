@@ -1,5 +1,5 @@
 ---
-title: "Data Science Project in R"
+title: "A Toolkit for Conducting an Exploratory Data Science Project in R"
 subtitle: "Pearsonverse"
 author: "Exploratory Data Science <br> Advanced Computing & Data Science Lab, Global Product"
 output:
@@ -33,7 +33,7 @@ knitr::opts_chunk$set(comment = "#>")
 
 --
 
-- World before Pearsonverse
+- The world before Pearsonverse
 
 --
 
@@ -55,15 +55,15 @@ class: center, middle
 ---
 class: center, middle
 
-### _Pearsonverse is a collection of packages that make it easier to conduct an exploratory data science project in R from start to end._
+### _Pearsonverse is a collection of in-house packages that make it easier to conduct an exploratory data science project in R from start to end._
 
 ---
 class: center, middle
 
-# World before Pearsonverse
+# The world before Pearsonverse
 
 ---
-## World before Pearsonverse
+## The world before Pearsonverse
 
 --
 
@@ -71,7 +71,7 @@ Everybody in our team ...
 
 --
 
-- creates plots in different layout.
+- creates plots in a different layout.
 
 --
 
@@ -99,24 +99,24 @@ Collection of packages:
 
 --
 
-1. <a href = "https://github.com/pearsonplc/skelpear" target = "_blank">_skelpear_</a> for building a project environment and maintaining a reproducibility.
+1. <a href = "https://github.com/pearsonplc/skelpear" target = "_blank">_skelpear_</a> a standardised project environment that facilitates collaboration. 
 
 --
 
-2. <a href = "https://github.com/pearsonplc/reppear" target = "_blank">_reppear_</a> for building a reproducible report with standardised layout.
+2. <a href = "https://github.com/pearsonplc/reppear" target = "_blank">_reppear_</a> a standardised report layout that facilitates reproducibility.
 
 --
 
-3. <a href = "https://github.com/pearsonplc/vispear" target = "_blank">_vispear_</a> for creating visualisation with coherent layout.
+3. <a href = "https://github.com/pearsonplc/vispear" target = "_blank">_vispear_</a> a standardised visualisation template.
 
 .bottom-text[
-_You can find a documentation for pearsonverse  <a href = "https://github.com/pearsonplc/pearsonverse" target = "_blank">here</a>._
+_See pearsonverse documentation on  <a href = "https://github.com/pearsonplc/pearsonverse" target = "_blank">GitHub</a>._
 ]
 
 ---
 ## Pearsonverse
 
-All you have to do:
+All you have to do is:
 
 ```{r,eval = F}
 # Install package
@@ -139,11 +139,11 @@ background-size: 100%
 ## Project phases
 
 
-1. Building a project environment (_skelpear_)
+1. Build a project environment (_skelpear_)
 
 --
 
-2. Conduct analysis (_vispear_)
+2. Conduct the analysis (_vispear_)
 
 --
 
@@ -151,18 +151,18 @@ background-size: 100%
 
 --
 
-4. Publish (_reppear_)
+4. Publish it (_reppear_)
 
 --
 
-Throughout the whole project: Maintain reproducibility (_skelpear_)
+Throughout the entire project: Maintain reproducibility (_skelpear_)
 
 ---
 class: center middle no-page-number
 background-image: url('img/divider_blue.jpg')
 background-size: 100%
 
-# Building project <br>environment
+# Building a project <br>environment
 
 ---
 ## Project environment
@@ -183,7 +183,7 @@ _Two arguments_
 
 --
 
-`path` - Path where you want to store your new project.
+`path` - A path for storing your new project.
 
 ---
 ## Project environment
@@ -194,11 +194,11 @@ skelpear::project_create(name = "project", path = ".")
 ```
 ]
 
-1. After executing `project_create()`, the new RStudio session will open automatically.
+1. After executing `project_create()`, a new RStudio session will open automatically.
 
 --
 
-2. The function initialises `git` environment.
+2. The function initialises a `git` environment.
 
 ---
 ## Project environment
@@ -215,7 +215,7 @@ skelpear::project_create(name = "project", path = ".")
 --
 
 .bottom-text[
-More info about each directory in  <a href = "https://github.com/pearsonplc/skelpear" target = "_blank">documentation</a>.
+More info about each directory in  <a href = "https://github.com/pearsonplc/skelpear" target = "_blank">the documentation</a>.
 ]
 
 ---
@@ -226,14 +226,14 @@ class: middle, center
 ---
 ## Project environment + git
 
-To push your project into __bitbucket__, two things have to be done:
+To push your project to __bitbucket__, you need to do 2 things:
 
 --
 
 1. Create a repository on bitbucket.    
 
 --
-2. On terminal, use `git remote add origin <remote_URL>` to link your local project with bitbucket repository.
+2. In terminal, use `git remote add origin <remote_URL>` to link your local project with the bitbucket repository.
 
 --
 
@@ -244,10 +244,10 @@ class: center middle no-page-number
 background-image: url('img/divider_blue.jpg')
 background-size: 100%
 
-# Conduct analysis
+# Conduct <br>the analysis
 
 ---
-## Conduct analysis
+## Conduct the analysis
 
 _Basic layout_
 .pull-three[
@@ -272,7 +272,7 @@ ggplot(mtcars, aes(qsec, mpg, color = factor(cyl))) +
 ```
 ]
 ---
-## Conduct analysis
+## Conduct the analysis
 
 _theme_enr layout_
 .pull-three[
@@ -299,7 +299,7 @@ ggplot(mtcars, aes(qsec, mpg, color = factor(cyl))) +
 ```
 ]
 ---
-## Conduct analysis
+## Conduct the analysis
 
 _Save plot_ 
 
@@ -324,7 +324,7 @@ save_plot2(name = plot,
 ]
 
 .bottom-text[
-Both functions are compatible with `theme_enr` layout. 
+Both functions are compatible with the `theme_enr` layout. 
 ]
 
 ---
@@ -333,11 +333,11 @@ class: middle, center
 # Showtime
 
 ---
-## Conduct analysis
+## Conduct the analysis
 
 _Show palettes_
 
-`show_enr_palettes()` funtion enables to list all available palettes defined in `vispear` package.
+The function `show_enr_palettes()` lists all palletes available in the `vispear` package.
 
 --
 
@@ -353,7 +353,7 @@ data.frame(name = names(palette_list), description = unlist(unname(palette_list)
 ]
 
 ---
-## Conduct analysis
+## Conduct the analysis
 
 .small-code[
 ```{r,eval=F}
@@ -364,17 +364,17 @@ datatable_enr(mtcars, tooltip = "This is the description of table.")
 <center><img src='intro_img/datatable_enr.png' height='350'/></center>
 
 .bottom-text[
-_More info about the function in  <a href = "http://ea.ioki.pl/~mbogucki/datatable_enr.html" target = "_blank">documentation</a> (VPN required)_.
+_Read more about the function in  <a href = "http://ea.ioki.pl/~mbogucki/datatable_enr.html" target = "_blank">documentation</a> (Epic or VPN required)_.
 ]
 ---
 class: center middle no-page-number
 background-image: url('img/divider_blue.jpg')
 background-size: 100%
 
-# Produce a report
+# Produce <br>the report
 
 ---
-## Produce a report
+## Produce the report
 
 ```{r,eval=F}
 reppear::report_create(file = "01_report", subdir = "reports")
@@ -382,11 +382,11 @@ reppear::report_create(file = "01_report", subdir = "reports")
 
 --
 
-- The function creates a report template.
+- The function creates a blank report based on the template.
 
 
 ---
-## Produce a report
+## Produce the report
 
 ```{r,eval=F}
 reppear::report_create(file = "01_report", subdir = "reports")
@@ -405,7 +405,7 @@ _Two arguments_
 `subdir` - Subdirectory where you want to store your new report.
 
 ---
-## Produce a report
+## Produce the report
 
 ```{r,eval=F}
 reppear::report_create(file = "01_report", subdir = "reports")
@@ -425,7 +425,7 @@ _*More info about the file in  <a href = "https://github.com/pearsonplc/reppear"
 ]
 
 ---
-## Produce a report
+## Produce the report
 
 To render _index.Rmd_, 
 
@@ -447,10 +447,10 @@ class: center middle no-page-number
 background-image: url('img/divider_blue.jpg')
 background-size: 100%
 
-# Publish
+# Publish it
 
 ---
-## Publish 
+## Publish it 
 
 ```{r,eval=F}
 reppear::publish(file = "reports/")
@@ -480,7 +480,7 @@ compare_snapshot()
 ```
 --
 
-A pair of functions which allows to __save__ and __compare__ set of packages used during the project. It's especially useful when more team members are involved in code development*.
+These two functions allow you to __save__ and __compare__ the packages used during the project. Use this if you want to make sure that others with whom you share the codebase have the same setup*.
 
 .bottom-text[
 _*More info about how the functions work in  <a href = "https://github.com/pearsonplc/skelpear" target = "_blank">documentation</a>._
@@ -491,7 +491,7 @@ class: center, middle
 # Final thoughts
 
 ---
-## Individual goals
+## Goals
 
 --
 
@@ -499,14 +499,22 @@ class: center, middle
 
 --
 
-- propose one __github repository__ for storing useful R code produced by Lab teams
-
----
-## Temporary contraint
+- propose a shared __github repository__ for storing and publishing useful R code produced by ACDSL, so that the R users in ACDSL can work faster using standardised tools…
 
 --
 
-- Pearsonverse was only tested on __macOS__. However, we plan to test it on Linux and Windows.
+- … and so that we start giving back to the open-source community
+
+---
+## Testers wanted
+
+--
+
+- Pearsonverse was only tested on __macOS__. We plan to test it on Linux and Windows soon.
+
+--
+
+- Testers wanted!
 
 ---
 class: middle, center
