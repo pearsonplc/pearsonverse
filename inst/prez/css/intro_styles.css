@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin-ext');
+
+body {
+  font-family: 'Open Sans';
+}
+
+h1, h2, h3 {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.inverse {
+  background-color: #003057;
+  color:#d4eae4;
+}
+
+.inverse code.remark-code {
+  text-shadow: 0 0 0 transparent;
+}
+
+.title-slide {
+  background-image: url('../img/pearson_logo_white.png');
+  background-size: 18%;
+  background-position: 7% 20%;
+  background-color: #003057;
+  color:#d4eae4;
+  text-align: left !important;
+  vertical-align: baseline !important;
+}
+
+.title-slide.remark-slide-content h1,
+.title-slide.remark-slide-content h2,
+.title-slide.remark-slide-content h3 {
+  font-weight: 300 !important;
+}
+
+.title-slide h1 {
+  font-size: 35px;
+  margin-top: 5.5em;
+  letter-spacing: -1px;
+}
+
+.title-slide h2 {
+  font-size: 65px;
+  -webkit-margin-before: 0.01em;
+  letter-spacing: -2px;
+}
+
+.title-slide h3 {
+  font-size: 25px;
+  position: absolute;
+  bottom: 50px;
+}
+
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+.no-page-number .remark-slide-number {
+  display: none;
+}
+
+.remark-slide-content {
+  font-size:26px;
+}
+
+.medium-text {
+  font-size:24px;
+}
+
+.text22 {
+  font-size:22px;
+}
+
+.text20 {
+  font-size:20px;
+}
+
+.remark-code {
+  font-size:26px !important;
+}
+
+.small-code pre .remark-code {
+  font-size:22px !important;
+}
+
+.wrap-code pre {
+  white-space: normal !important;
+}
+
+a {
+  color: #007FA3;
+}
+
+.pull-seven {
+  float: right;
+  width: 55%;
+}
+
+.pull-three {
+  float: left;
+  width: 44%;
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 50px;
+  font-size: 22px;
+}
