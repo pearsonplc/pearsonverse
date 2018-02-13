@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Data Science Project in R</title>
+    <title>A Toolkit for Conducting an Exploratory Data Science Project in R</title>
     <meta charset="utf-8">
     <meta name="author" content="Exploratory Data Science   Advanced Computing &amp; Data Science Lab, Global Product" />
     <link rel="stylesheet" href="css/intro_styles.css" type="text/css" />
@@ -10,7 +10,7 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Data Science Project in R
+# A Toolkit for Conducting an Exploratory Data Science Project in R
 ## Pearsonverse
 ### Exploratory Data Science <br> Advanced Computing &amp; Data Science Lab, Global Product
 
@@ -28,7 +28,7 @@ class: center, middle, inverse, title-slide
 
 --
 
-- World before Pearsonverse
+- The world before Pearsonverse
 
 --
 
@@ -50,15 +50,15 @@ class: center, middle
 ---
 class: center, middle
 
-### _Pearsonverse is a collection of packages that make it easier to conduct an exploratory data science project in R from start to end._
+### _Pearsonverse is a collection of in-house packages that make it easier to conduct an exploratory data science project in R from start to end._
 
 ---
 class: center, middle
 
-# World before Pearsonverse
+# The world before Pearsonverse
 
 ---
-## World before Pearsonverse
+## The world before Pearsonverse
 
 --
 
@@ -66,7 +66,7 @@ Everybody in our team ...
 
 --
 
-- creates plots in different layout.
+- creates plots in a different layout.
 
 --
 
@@ -94,24 +94,24 @@ Collection of packages:
 
 --
 
-1. &lt;a href = "https://github.com/pearsonplc/skelpear" target = "_blank"&gt;_skelpear_&lt;/a&gt; for building a project environment and maintaining a reproducibility.
+1. &lt;a href = "https://github.com/pearsonplc/skelpear" target = "_blank"&gt;_skelpear_&lt;/a&gt; a standardised project environment that facilitates collaboration. 
 
 --
 
-2. &lt;a href = "https://github.com/pearsonplc/reppear" target = "_blank"&gt;_reppear_&lt;/a&gt; for building a reproducible report with standardised layout.
+2. &lt;a href = "https://github.com/pearsonplc/reppear" target = "_blank"&gt;_reppear_&lt;/a&gt; a standardised report layout that facilitates reproducibility.
 
 --
 
-3. &lt;a href = "https://github.com/pearsonplc/vispear" target = "_blank"&gt;_vispear_&lt;/a&gt; for creating visualisation with coherent layout.
+3. &lt;a href = "https://github.com/pearsonplc/vispear" target = "_blank"&gt;_vispear_&lt;/a&gt; a standardised visualisation template.
 
 .bottom-text[
-_You can find a documentation for pearsonverse  &lt;a href = "https://github.com/pearsonplc/pearsonverse" target = "_blank"&gt;here&lt;/a&gt;._
+_See pearsonverse documentation on  &lt;a href = "https://github.com/pearsonplc/pearsonverse" target = "_blank"&gt;GitHub&lt;/a&gt;._
 ]
 
 ---
 ## Pearsonverse
 
-All you have to do:
+All you have to do is:
 
 
 ```r
@@ -135,11 +135,11 @@ background-size: 100%
 ## Project phases
 
 
-1. Building a project environment (_skelpear_)
+1. Build a project environment (_skelpear_)
 
 --
 
-2. Conduct analysis (_vispear_)
+2. Conduct the analysis (_vispear_)
 
 --
 
@@ -147,18 +147,18 @@ background-size: 100%
 
 --
 
-4. Publish (_reppear_)
+4. Publish it (_reppear_)
 
 --
 
-Throughout the whole project: Maintain reproducibility (_skelpear_)
+Throughout the entire project: Maintain reproducibility (_skelpear_)
 
 ---
 class: center middle no-page-number
 background-image: url('img/divider_blue.jpg')
 background-size: 100%
 
-# Building project &lt;br&gt;environment
+# Building a project &lt;br&gt;environment
 
 ---
 ## Project environment
@@ -180,7 +180,7 @@ _Two arguments_
 
 --
 
-`path` - Path where you want to store your new project.
+`path` - A path for storing your new project.
 
 ---
 ## Project environment
@@ -192,11 +192,11 @@ skelpear::project_create(name = "project", path = ".")
 ```
 ]
 
-1. After executing `project_create()`, the new RStudio session will open automatically.
+1. After executing `project_create()`, a new RStudio session will open automatically.
 
 --
 
-2. The function initialises `git` environment.
+2. The function initialises a `git` environment.
 
 ---
 ## Project environment
@@ -214,7 +214,7 @@ skelpear::project_create(name = "project", path = ".")
 --
 
 .bottom-text[
-More info about each directory in  &lt;a href = "https://github.com/pearsonplc/skelpear" target = "_blank"&gt;documentation&lt;/a&gt;.
+More info about each directory in  &lt;a href = "https://github.com/pearsonplc/skelpear" target = "_blank"&gt;the documentation&lt;/a&gt;.
 ]
 
 ---
@@ -225,14 +225,14 @@ class: middle, center
 ---
 ## Project environment + git
 
-To push your project into __bitbucket__, two things have to be done:
+To push your project to __bitbucket__, you need to do 2 things:
 
 --
 
 1. Create a repository on bitbucket.    
 
 --
-2. On terminal, use `git remote add origin &lt;remote_URL&gt;` to link your local project with bitbucket repository.
+2. In terminal, use `git remote add origin &lt;remote_URL&gt;` to link your local project with the bitbucket repository.
 
 --
 
@@ -243,10 +243,10 @@ class: center middle no-page-number
 background-image: url('img/divider_blue.jpg')
 background-size: 100%
 
-# Conduct analysis
+# Conduct &lt;br&gt;the analysis
 
 ---
-## Conduct analysis
+## Conduct the analysis
 
 _Basic layout_
 .pull-three[
@@ -268,7 +268,7 @@ ggplot(mtcars,
 &lt;img src="intro_files/figure-html/unnamed-chunk-5-1.png" width="119%" /&gt;
 ]
 ---
-## Conduct analysis
+## Conduct the analysis
 
 _theme_enr layout_
 .pull-three[
@@ -291,7 +291,7 @@ ggplot(mtcars,
 &lt;img src="intro_files/figure-html/unnamed-chunk-6-1.png" width="119%" /&gt;
 ]
 ---
-## Conduct analysis
+## Conduct the analysis
 
 _Save plot_ 
 
@@ -317,7 +317,7 @@ save_plot2(name = plot,
 ]
 
 .bottom-text[
-Both functions are compatible with `theme_enr` layout. 
+Both functions are compatible with the `theme_enr` layout. 
 ]
 
 ---
@@ -326,11 +326,11 @@ class: middle, center
 # Showtime
 
 ---
-## Conduct analysis
+## Conduct the analysis
 
 _Show palettes_
 
-`show_enr_palettes()` funtion enables to list all available palettes defined in `vispear` package.
+The function `show_enr_palettes()` lists all palletes available in the `vispear` package.
 
 --
 
@@ -355,7 +355,7 @@ vispear::show_enr_palettes()
 ]
 
 ---
-## Conduct analysis
+## Conduct the analysis
 
 .small-code[
 
@@ -367,17 +367,17 @@ datatable_enr(mtcars, tooltip = "This is the description of table.")
 &lt;center&gt;&lt;img src='intro_img/datatable_enr.png' height='350'/&gt;&lt;/center&gt;
 
 .bottom-text[
-_More info about the function in  &lt;a href = "http://ea.ioki.pl/~mbogucki/datatable_enr.html" target = "_blank"&gt;documentation&lt;/a&gt; (VPN required)_.
+_Read more about the function in  &lt;a href = "http://ea.ioki.pl/~mbogucki/datatable_enr.html" target = "_blank"&gt;documentation&lt;/a&gt; (Epic or VPN required)_.
 ]
 ---
 class: center middle no-page-number
 background-image: url('img/divider_blue.jpg')
 background-size: 100%
 
-# Produce a report
+# Produce &lt;br&gt;the report
 
 ---
-## Produce a report
+## Produce the report
 
 
 ```r
@@ -386,11 +386,11 @@ reppear::report_create(file = "01_report", subdir = "reports")
 
 --
 
-- The function creates a report template.
+- The function creates a blank report based on the template.
 
 
 ---
-## Produce a report
+## Produce the report
 
 
 ```r
@@ -410,7 +410,7 @@ _Two arguments_
 `subdir` - Subdirectory where you want to store your new report.
 
 ---
-## Produce a report
+## Produce the report
 
 
 ```r
@@ -431,7 +431,7 @@ _*More info about the file in  &lt;a href = "https://github.com/pearsonplc/reppe
 ]
 
 ---
-## Produce a report
+## Produce the report
 
 To render _index.Rmd_, 
 
@@ -454,10 +454,10 @@ class: center middle no-page-number
 background-image: url('img/divider_blue.jpg')
 background-size: 100%
 
-# Publish
+# Publish it
 
 ---
-## Publish 
+## Publish it 
 
 
 ```r
@@ -489,7 +489,7 @@ compare_snapshot()
 ```
 --
 
-A pair of functions which allows to __save__ and __compare__ set of packages used during the project. It's especially useful when more team members are involved in code development*.
+These two functions allow you to __save__ and __compare__ the packages used during the project. Use this if you want to make sure that others with whom you share the codebase have the same setup*.
 
 .bottom-text[
 _*More info about how the functions work in  &lt;a href = "https://github.com/pearsonplc/skelpear" target = "_blank"&gt;documentation&lt;/a&gt;._
@@ -500,7 +500,7 @@ class: center, middle
 # Final thoughts
 
 ---
-## Individual goals
+## Goals
 
 --
 
@@ -508,14 +508,22 @@ class: center, middle
 
 --
 
-- propose one __github repository__ for storing useful R code produced by Lab teams
-
----
-## Temporary contraint
+- propose a shared __github repository__ for storing and publishing useful R code produced by ACDSL, so that the R users in ACDSL can work faster using standardised tools…
 
 --
 
-- Pearsonverse was only tested on __macOS__. However, we plan to test it on Linux and Windows.
+- … and so that we start giving back to the open-source community
+
+---
+## Testers wanted
+
+--
+
+- Pearsonverse was only tested on __macOS__. We plan to test it on Linux and Windows soon.
+
+--
+
+- Testers wanted!
 
 ---
 class: middle, center
@@ -543,8 +551,15 @@ background-size: 100%
 "highlightLines": true,
 "countIncrementalSlides": false
 });
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
-(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
