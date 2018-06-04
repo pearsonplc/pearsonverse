@@ -51,7 +51,7 @@ library(pearsonverse)
 2.&nbsp;Create a new project. It will open a new session.
 
 ```{r,eval=F}
-skelpear::project_create(project_name = "example_project")
+skelpear::project_create(name = "example_project")
 ```
 
 3.&nbsp;In the console, the warning shows up:

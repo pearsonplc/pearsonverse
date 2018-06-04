@@ -16,7 +16,6 @@ Usage
 `library(pearsonverse)` will load the core `pearsonverse` packages:
 
 -   <a href = "https://github.com/pearsonplc/skelpear" target = "_blank">skelpear</a>, for building a project environment and maintaining a reproducibility.
-
 -   <a href = "https://github.com/pearsonplc/reppear" target = "_blank">reppear</a>, for building reproducible reports with a standardised layout.
 -   <a href = "https://github.com/pearsonplc/vispear" target = "_blank">vispear</a>, for creating visualisations with a coherent layout.
 
@@ -26,11 +25,11 @@ When you load the **pearsonverse** library, you'll see that it loads the three p
 library(pearsonverse)
 ```
 
-    #> ── Attaching packages ─────────────────────────────────────────────────── pearsonverse 1.0.0 ──
+    #> ── Attaching packages ──────────────────────────────── pearsonverse 1.0.0 ──
 
-    #> ✔ vispear  1.0.0
-    #> ✔ reppear  1.0.0
-    #> ✔ skelpear 1.0.0
+    #> ✔ vispear  1.0.3
+    #> ✔ reppear  1.1.0
+    #> ✔ skelpear 1.1.1
 
 Data Science Workflow
 ---------------------
@@ -44,7 +43,7 @@ library(pearsonverse)
 2. Create a new project. It will open a new session.
 
 ``` r
-skelpear::project_create(project_name = "example_project")
+skelpear::project_create(name = "example_project")
 ```
 
 3. In the console, the warning shows up:
@@ -61,7 +60,6 @@ The `packages.dcf` file lists all attached packages used during the project. It 
 ``` r
 skelpear::snapshot_pkg()
 ```
-
 
 The function will save your package environment in `config/packages.dcf` file. Once you push it to a bitbucket repository, anybody can pull it and compare it with the local package envrionment via the `compare_snapshot` function. You can find more info about these functions in <a href = "https://github.com/pearsonplc/skelpear" target = "_blank">skelpear</a> package introduction.
 
